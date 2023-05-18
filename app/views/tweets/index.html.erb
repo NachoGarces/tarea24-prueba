@@ -11,4 +11,6 @@
   <% end %>
 </div>
 
-<%= link_to "New tweet", new_tweet_path %>
+<%= link_to "Nuevo tweet", new_tweet_path %>
+
+<%= link_to "Ver mas", tweets_path(:v => 10+params[:v].to_i) %>
