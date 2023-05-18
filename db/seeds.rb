@@ -9,5 +9,5 @@
 require 'faker'
 
 50.times do |i|
-    Tweet.create([{descripcion: Faker::Games::Minecraft.item, userName: Faker::Games::StreetFighter.character}])
+    Tweet.create(descripcion: Faker::Games::Minecraft.item, userName: Faker::Games::StreetFighter.character)
 end

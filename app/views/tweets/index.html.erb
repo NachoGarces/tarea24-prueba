@@ -1,18 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tweets</h1>
+<h1 class="text-center">Tweets</h1>
 
-<%= form_with url: "tweets/buscar", method: :post do |form| %>
-  <%= form.text_field :f %>
-  <%= form.submit "Buscar por ID" %>
-<% end %>
+<div>
+  <%= form_with url: "tweets/buscar", method: :post do |form| %>
+    <div class="input-group mb-3 px-5">
+      <%= form.text_field :f, class: "form-control" %>
+      <%= form.submit "Buscar por ID", class: "btn btn-outline-secondary" %>
+    </div>
+  <% end %>
+</div>
 
 <div id="tweets">
   <% @tweets.each do |tweet| %>
-    <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
+
+    <div class="card text-left m-5">
+      <div class="card-header">
+        @<%= tweet.userName %>_<%= tweet.id %>
+      </div>
+      <div class="card-body">
+        <h6>Descripcion</h6>
+        <p class="card-text"><%= tweet.descripcion %></p>
+        <%= link_to "Ver Tweet", tweet, class:"btn btn-info" %>
+      </div>
+      <div class="card-footer text-body-secondary">
+        Creado <%= tweet.created_at.strftime("%d-%m-%Y %H:%M") %>
+        <% if tweet.updated_at != tweet.created_at %>
+           - Editado <%= tweet.updated_at.strftime("%d-%m-%Y %H:%M") %>
+        <% end %>
+      </div>
+    </div>
+
   <% end %>
 </div>
 

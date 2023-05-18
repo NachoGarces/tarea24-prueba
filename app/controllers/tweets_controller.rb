@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   # GET /tweets or /tweets.json
   def index
     verMas=params[:v].to_i
-    @tweets = Tweet.all.limit(verMas+10).offset(verMas)
+    @tweets = Tweet.all.limit(10).offset(verMas)
   end
 
   def buscar
