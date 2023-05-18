@@ -3,8 +3,12 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    verMas=10+params[:v].to_i
-    @tweets = Tweet.all.limit(verMas)
+    verMas=params[:v].to_i
+    @tweets = Tweet.all.limit(verMas+10).offset(verMas)
+  end
+
+  def buscar
+    redirect_to tweet_path(params[:f])
   end
 
   # GET /tweets/1 or /tweets/1.json
