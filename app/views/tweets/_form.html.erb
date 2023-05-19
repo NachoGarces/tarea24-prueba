@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :descripcion, style: "display: block" %>
-    <%= form.text_field :descripcion %>
+  <div class="input-group mb-3">
+    <%= form.label :'@', class:"input-group-text", id:"basic-addon1" %>
+    <%= form.text_field :userName, class:"form-control", placeholder:"Username" %>
+    <%= form.label :"ID", class:"input-group-text", id:"basic-addon1" %>
   </div>
 
-  <div>
-    <%= form.label :userName, style: "display: block" %>
-    <%= form.text_field :userName %>
+  <div class="input-group">
+    <%= form.label :descripcion, class:"input-group-text" %>
+    <%= form.text_area :descripcion, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="text-end mt-3">
+    <%= form.submit class:"btn btn-success" %>
   </div>
 <% end %>

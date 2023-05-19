@@ -1,24 +1,9 @@
-# README
+## Tarea 24 Prueba - Introducción a desarrollo de aplicaciones con Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Se crea un clon de twitter con el uso de scaffold para la creacion, edicion y eliminacion de tweets
 
-Things you may want to cover:
 
-* Ruby version
+#### Ruby 3.2.2 (2023-03-30 revision e51014f9c0)
+## Autor
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [@NachoGarces](https://github.com/NachoGarces)

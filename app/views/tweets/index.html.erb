@@ -10,6 +10,9 @@
     </div>
   <% end %>
 </div>
+<div class="text-center">
+  <%= link_to "Nuevo tweet", new_tweet_path, class: "btn btn-success" %>
+</div>
 
 <div id="tweets">
   <% @tweets.each do |tweet| %>
@@ -33,7 +36,6 @@
 
   <% end %>
 </div>
-
-<%= link_to "Nuevo tweet", new_tweet_path %>
-
-<%= link_to "Ver mas", tweets_path(:v => 10+params[:v].to_i) %>
+<div class="text-center">
+  <%= link_to "Ver mas", tweets_path(:v => 10+params[:v].to_i), class: "btn btn-success my-3" %>
+</div>
